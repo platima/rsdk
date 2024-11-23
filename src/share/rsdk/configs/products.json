@@ -4,7 +4,7 @@
         "product_name": "ROCK 4SE",
         "product_full_name": "ROCK 4SE",
         "soc": "rk3399t",
-        "supported_suite": ["bullseye"],
+        "supported_suite": ["bookworm"],
         "supported_edition": ["cli"]
     }
 ]
