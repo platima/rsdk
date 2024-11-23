@@ -42,6 +42,8 @@ jobs:
         id: query
         run: |
           echo "products=$(jq -c '. | map(.product)' src/share/rsdk/configs/products.json)" >> $GITHUB_OUTPUT
+          echo "suite=$(jq -c '. | map(.supported_suite)[0]' src/share/rsdk/configs/products.json)" >> $GITHUB_OUTPUT
+          echo "edition=$(jq -c '. | map(.supported_edition)[0]' src/share/rsdk/configs/products.json)" >> $GITHUB_OUTPUT
   build-images:
     needs: [ query ]
     runs-on: ubuntu-latest
